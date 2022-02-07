@@ -120,24 +120,24 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * return value.
  */
 
-function calculateTotal(luckyNumber, totalAmount) {
-    var amountOwed;
-    if (luckyNumber === 0) {
-        amountOwed = totalAmount;
-    } else if (luckyNumber === 1) {
-        amountOwed = totalAmount - (totalAmount * .1);
-    } else if (luckyNumber === 2) {
-        amountOwed = totalAmount - (totalAmount * .25);
-    } else if (luckyNumber === 3) {
-        amountOwed = totalAmount - (totalAmount * .35);
-    } else if (luckyNumber === 4) {
-        amountOwed = totalAmount - (totalAmount * .5);
-    } else amountOwed(luckyNumber === 5)
-    {
-        amountOwed = totalAmount - (totalAmount * 100)
-    }
-
-}
+// function calculateTotal(luckyNumber, totalAmount) {
+//     var amountOwed;
+//     if (luckyNumber === 0) {
+//         amountOwed = totalAmount;
+//     } else if (luckyNumber === 1) {
+//         amountOwed = totalAmount - (totalAmount * .1);
+//     } else if (luckyNumber === 2) {
+//         amountOwed = totalAmount - (totalAmount * .25);
+//     } else if (luckyNumber === 3) {
+//         amountOwed = totalAmount - (totalAmount * .35);
+//     } else if (luckyNumber === 4) {
+//         amountOwed = totalAmount - (totalAmount * .5);
+//     } else amountOwed(luckyNumber === 5)
+//     {
+//         amountOwed = totalAmount - (totalAmount * 100)
+//     }
+//
+// }
 
 // console.log(calculateTotal(0, 100)); // returns 100
 // console.log(calculateTotal(4, 100));// returns 50
@@ -153,13 +153,13 @@ function calculateTotal(luckyNumber, totalAmount) {
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-var luckyNumber = Math.floor(Math.random() * 6);
-var totalBillDollars = prompt('please enter your total in dollars');
-var findBillDollars = calculateTotal(luckyNumber, totalBillDollars);
-var billMessage = 'your lucky number is ' + luckyNumber + '. your original bill was ' + totalBillDollars
-+ ' and the final cost is ' + findBillDollars;
-
-alert(billMessage)
+// var luckyNumber = Math.floor(Math.random() * 6);
+// var totalBillDollars = prompt('please enter your total in dollars');
+// var findBillDollars = calculateTotal(luckyNumber, totalBillDollars);
+// var billMessage = 'your lucky number is ' + luckyNumber + '. your original bill was ' + totalBillDollars
+// + ' and the final cost is ' + findBillDollars;
+//
+// alert(billMessage)
 
 
 /**
@@ -180,3 +180,13 @@ alert(billMessage)
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+var userNumber = Number(prompt('enter a number: '));
+
+if(userNumber % 2 == 0) {
+    console.log('the number is even.');
+}
+
+else {
+    console.log('the number is odd.');
+}
