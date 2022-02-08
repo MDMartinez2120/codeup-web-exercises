@@ -54,17 +54,17 @@
     var numbers = [1,2,3,4,5];
 
     function firstItem(){
-        return numbers.indexOf(1);
+        return numbers[0];
     }
     console.log(firstItem());
 
     function secondItem(){
-        return numbers.indexOf(2);
+        return numbers[1];
     }
     console.log(secondItem());
 
     function lastItem(){
-        return numbers.indexOf(5);
+        return numbers[4];
     }
     console.log(lastItem());
 
