@@ -23,21 +23,21 @@
  */
 
 
-var string = 'blue';
-
-function analyzeColor(string) {
-
-    if (string === 'blue') {
-        return 'blue is the color of the sky';
-    } else if (string === 'red') {
-        return 'stawberries are red';
-    } else if (string === 'cyan') {
-        return 'I don\'t know anything about cyan';
-    }
-}
-console.log(analyzeColor('cyan'))
-console.log(analyzeColor('blue'))
-console.log(analyzeColor('red'))
+// var string = 'blue';
+//
+// function analyzeColor(string) {
+//
+//     if (string === 'blue') {
+//         return 'blue is the color of the sky';
+//     } else if (string === 'red') {
+//         return 'stawberries are red';
+//     } else if (string === 'cyan') {
+//         return 'I don\'t know anything about cyan';
+//     }
+// }
+// console.log(analyzeColor('cyan'))
+// console.log(analyzeColor('blue'))
+// console.log(analyzeColor('red'))
 
 
 
@@ -183,10 +183,21 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 var userNumber = Number(prompt('enter a number: '));
 
-if(userNumber % 2 == 0) {
-    console.log('the number is even.');
+function numberPlusHundred(number) {
+    return (userNumber + 100);
 }
 
-else {
-    console.log('the number is odd.');
+function isItNegative(number) {
+    return (userNumber < 0);
 }
+
+
+if(userNumber % 2 === 0) {
+    alert('the number is even.');
+} else {
+    alert('the number is odd.');
+} numberPlusHundred(userNumber)
+    alert( userNumber + 100);
+    isItNegative(userNumber)
+    alert('is it negative?')
+    alert(userNumber < 0);
