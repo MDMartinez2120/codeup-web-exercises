@@ -25,7 +25,7 @@
 //     console.log(repeatNumber.toString().repeat(repeatNumber));
 // }
 
-for (var byFive = 100; byFive > 5; byFive -= 5) {
+for (var byFive = 100; byFive >= 5; byFive -= 5) {
     console.log(byFive);
 }
 
