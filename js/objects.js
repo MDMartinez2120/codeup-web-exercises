@@ -56,12 +56,21 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
 
+    shoppers.forEach(function(shopper) {
+
+        // shoppers[i].afterDiscount = shopper.amount * .88
+
+        console.log(shopper.name,  shopper.amount, shopper.amount * .88);
+    });
+
+
+    // console.log(shoppers)
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
@@ -74,6 +83,14 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    var books = [
+        {title: 'The Hungry Hungry Caterpillar', author:{firstName: 'Eric',        lastName: 'Carle'}},
+        {title: 'All About Me', author:{firstName: 'Mel', lastName: 'Brooks'}},
+        {title: 'The Hunger Games', author:{firstName: 'Suzanne', lastName: 'Collins'}},
+        {title: 'The Book Theif', author:{firstName: 'Markus', lastName: 'Zusak'}},
+        {title: 'The Help', author:{firstName: 'Kathryn', lastName: 'Stockett'}},
+    ]
 
     /**
      * TODO:
@@ -100,6 +117,10 @@
      *      ...
      */
 
+    books.forEach(function (bookInfo){
+        console.log('Title: ' + bookInfo.title, 'Author: ' + bookInfo.author.firstName + ' ' + bookInfo.author.lastName,);
+    });
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -110,5 +131,10 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+function createBook(title, author){
+        return
+    }
+
 
 })();

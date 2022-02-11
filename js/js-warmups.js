@@ -27,11 +27,15 @@
 // twoNumbers()
 // console.log(twoNumbers(6, 8))
 
-function inNumber(number) {
-    return number * 5 ;
+// Write a function called removeBs that takes in an array of strings and returns an array of strings with all b’s removed from each string. Assume
+// the array contains only string elements.
+//     Examples...
+// removeBs([‘abc’, ‘ab’, ‘cat’, ‘Bay’]) // returns [‘ac’, ‘a’, ‘cat’, ‘ay’]
+
+var bArrays = ['abc', 'ab', 'cat', 'Bay'];
+
+function removeBs (){
+    return bArrays.push('b');
 }
 
-inNumber()
-console.log()
-
-
+console.log(removeBs([bArrays]));
