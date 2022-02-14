@@ -66,7 +66,7 @@
 
         // shoppers[i].afterDiscount = shopper.amount * .88
 
-        console.log(shopper.name,  shopper.amount, shopper.amount * .88);
+        console.log('Hello ' + shopper.name, 'your total amount spent is', (shopper.amount > 200), 'Which makes your discount', shopper.amount * .88);
     });
 
 
@@ -84,13 +84,13 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
-    var books = [
-        {title: 'The Hungry Hungry Caterpillar', author:{firstName: 'Eric',        lastName: 'Carle'}},
-        {title: 'All About Me', author:{firstName: 'Mel', lastName: 'Brooks'}},
-        {title: 'The Hunger Games', author:{firstName: 'Suzanne', lastName: 'Collins'}},
-        {title: 'The Book Theif', author:{firstName: 'Markus', lastName: 'Zusak'}},
-        {title: 'The Help', author:{firstName: 'Kathryn', lastName: 'Stockett'}},
-    ]
+    // var books = [
+    //     {title: 'The Hungry Hungry Caterpillar', author:{firstName: 'Eric',        lastName: 'Carle'}},
+    //     {title: 'All About Me', author:{firstName: 'Mel', lastName: 'Brooks'}},
+    //     {title: 'The Hunger Games', author:{firstName: 'Suzanne', lastName: 'Collins'}},
+    //     {title: 'The Book Thief', author:{firstName: 'Markus', lastName: 'Zusak'}},
+    //     {title: 'The Help', author:{firstName: 'Kathryn', lastName: 'Stockett'}},
+    // ]
 
     /**
      * TODO:
@@ -117,8 +117,43 @@
      *      ...
      */
 
-    books.forEach(function (bookInfo){
-        console.log('Title: ' + bookInfo.title, 'Author: ' + bookInfo.author.firstName + ' ' + bookInfo.author.lastName,);
+    // books.forEach(function (bookInfo){
+    //     console.log('Title: ' + bookInfo.title, 'Author: ' + bookInfo.author.firstName + ' ' + bookInfo.author.lastName,);
+    // });
+
+    var books = [
+            {
+                title: '1984',
+                author: {
+                    firstName: 'George',
+                    lastName: 'Orwell'
+                }
+            },
+            {
+                title: 'Book 2',
+                author: {
+                    firstName: 'FirstName2',
+                    lastName: 'LastName2'
+                }
+            },
+            {
+                title: 'Book 3',
+                author: {
+                    firstName: 'FirstName3',
+                    lastName: 'LastName3'
+                }
+            },
+            {
+                title: 'Book 4',
+                author: {
+                    firstName: 'FirstName4',
+                    lastName: 'LastName4'
+                }
+            }
+        ];
+
+books.forEach(function(bookInfo){
+    console.log('Title: ' + bookInfo.title, '\n' + 'Author: ' + bookInfo.author.firstName + '\n' + bookInfo.author.lastName,);
     });
 
     /**

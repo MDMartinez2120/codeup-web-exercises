@@ -32,10 +32,32 @@
 //     Examples...
 // removeBs([‘abc’, ‘ab’, ‘cat’, ‘Bay’]) // returns [‘ac’, ‘a’, ‘cat’, ‘ay’]
 
-var bArrays = ['abc', 'ab', 'cat', 'Bay'];
+// var bArrays = ['abc', 'ab', 'cat', 'Bay'];
+//
+// function removeBs (){
+//     return bArrays.push('b');
+// }
+//
+// console.log(removeBs([bArrays]));
 
-function removeBs (){
-    return bArrays.push('b');
+// Write a function, createUserMsg, that takes in a user object like the following...
+// {
+//     {username: 'jbomb',
+//     email: ‘john@email.com’},
+//     {isAdmin: true}
+// }
+// ...and returns a string output that displays in the console like this...
+// ‘User jbomb is an admin and can be reached at john@email.com’
+// If jbomb were not an admin, the message should display...
+// ‘User jbomb is not an admin and can be reached at john@email.com’
+
+var user = [
+    {username: 'jbomb',},
+    {email: 'john@email.com',},
+    {isAdmin: 'true'}
+]
+
+user.createUserMessage = function(){
+    console.log('user ' + user.username + 'is and admin and can be reached at ' + user.email + '.');
 }
 
-console.log(removeBs([bArrays]));
