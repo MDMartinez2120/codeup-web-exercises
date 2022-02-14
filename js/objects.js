@@ -132,9 +132,15 @@
      *   `showBookInfo` function.
      */
 
-function createBook(title, author){
-        return
-    }
+books.forEach(function(createBook){
+    console.log('Title: ' + createBook.title, 'Author: ' + createBook.author.firstName + ' ' + createBook.author.lastName,);
+})
+
+books.forEach(function(
+    showBookInfo
+){
+    console.log('Title: ' + showBookInfo.title, 'Author: ' + showBookInfo.author.firstName + ' ' + showBookInfo.author.lastName,);
+})
 
 
 })();
