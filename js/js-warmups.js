@@ -51,13 +51,31 @@
 // If jbomb were not an admin, the message should display...
 // ‘User jbomb is not an admin and can be reached at john@email.com’
 
-var user = [
-    {username: 'jbomb',},
-    {email: 'john@email.com',},
-    {isAdmin: 'true'}
-]
+// var user = [
+//     {username: 'jbomb',},
+//     {email: 'john@email.com',},
+//     {isAdmin: 'true'}
+// ]
+//
+// user.createUserMessage = function(){
+//     console.log('user ' + user.username + 'is and admin and can be reached at ' + user.email + '.');
+// }
 
-user.createUserMessage = function(){
-    console.log('user ' + user.username + 'is and admin and can be reached at ' + user.email + '.');
+// var areaOrPerimeter = function(l,w){
+//     return (l * w);
+// }
+
+function areaOrPerimeter(l, w){
+    if(isNaN(l)===false || isNaN(w)===false){
+        return false;
+    }
+    if (l === w){
+        return (l * w);
+    } if (l !== w){
+        return (l + w) * 2;
+    }
 }
+console.log(areaOrPerimeter(4, 4));
+console.log(areaOrPerimeter(6, 10));
+
 
