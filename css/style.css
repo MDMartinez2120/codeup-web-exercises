@@ -2,4 +2,30 @@
     .fancy-header {
      color: purple;
      text-decoration: underline;
+     text-align: center;
+ }
+
+h2{
+    color: chocolate;
+    text-decoration: underline;
+}
+
+body{
+    background-color: darkcyan;
+    background-image: url(https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
+    background-repeat: repeat-y;
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: aliceblue;
+}
+
+ul {
+    list-style-type: upper-roman;
+}
+
+ table, th, td {
+     border: 1px solid;
+ }
+
+ a {
+     color: azure;
  }
