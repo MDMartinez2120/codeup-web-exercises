@@ -13,6 +13,7 @@ body, html {
     padding-left: 10px;
     margin: 10px 100px 10px 10px;
     background-color: rgba(0, 191, 255, 0.2);
+    color: blue;
 
 }
 
@@ -25,6 +26,7 @@ body, html {
     margin-bottom: 10px;
     padding-block: 10px;
     background-color: rgba(95, 158, 160, 0.2);
+    color: green;
 }
 
 .message-warning{
@@ -36,6 +38,7 @@ body, html {
     margin-bottom: 10px;
     padding-block: 10px;
     background-color: rgba(255, 255, 0, 0.2);
+    color: yellowgreen;
 }
 
 .message-error{
@@ -47,4 +50,5 @@ body, html {
     margin-bottom: 10px;
     padding-block: 10px;
     background-color: rgba(205, 92, 92, 0.2);
+    color: red;
 }
