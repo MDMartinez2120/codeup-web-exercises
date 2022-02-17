@@ -65,17 +65,24 @@
 //     return (l * w);
 // }
 
-function areaOrPerimeter(l, w){
-    if(isNaN(l)===false || isNaN(w)===false){
-        return false;
-    }
-    if (l === w){
-        return (l * w);
-    } if (l !== w){
-        return (l + w) * 2;
-    }
+// function areaOrPerimeter(l, w){
+//     if(isNaN(l)===false || isNaN(w)===false){
+//         return false;
+//     }
+//     if (l === w){
+//         return (l * w);
+//     } if (l !== w){
+//         return (l + w) * 2;
+//     }
+// }
+// console.log(areaOrPerimeter(4, 4));
+// console.log(areaOrPerimeter(6, 10));
+
+function sumTheString(numString1, numbString2){
+   return (parseFloat(numString1) + parseFloat(numbString2)).toString();
+
 }
-console.log(areaOrPerimeter(4, 4));
-console.log(areaOrPerimeter(6, 10));
+
+console.log(sumTheString(6,13));
 
 
