@@ -77,7 +77,7 @@ fieldset {
     margin-bottom: 4px;
     padding: .5em;
     /*border-spacing: 4px;*/
-    width: calc(100% - 1em);
+    width: calc(100% - 4px);
 }
 
 
