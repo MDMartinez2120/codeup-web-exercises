@@ -78,11 +78,27 @@
 // console.log(areaOrPerimeter(4, 4));
 // console.log(areaOrPerimeter(6, 10));
 
-function sumTheString(numString1, numbString2){
-   return (parseFloat(numString1) + parseFloat(numbString2)).toString();
+// function sumTheString(numString1, numbString2){
+//    return (parseFloat(numString1) + parseFloat(numbString2)).toString();
+//
+// }
+//
+// console.log(sumTheString(6,13));
 
+// In a new HTML file in `codeup-web-exercises`, add a script to solve the following problem...
+// Write a function, getSimpleUser, that takes in a user object and returns a simplified user object.
+//     Assume the following shape of the user object for the function input:
+
+var fred = {
+    firstName: 'Fred',
+    lastName: 'Smith',
+    email: 'fred@email.com',
+    username: 'fred123',
+    password: 'pass123'
 }
 
-console.log(sumTheString(6,13));
+function getSimpleUser(user){
+    return {firstName: user.firstName.toLowerCase(), lastName: user.lastName.toLowerCase()};
+}
 
-
+console.log(getSimpleUser(fred))
