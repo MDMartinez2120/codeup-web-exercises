@@ -89,16 +89,58 @@
 // Write a function, getSimpleUser, that takes in a user object and returns a simplified user object.
 //     Assume the following shape of the user object for the function input:
 
-var fred = {
-    firstName: 'Fred',
-    lastName: 'Smith',
-    email: 'fred@email.com',
-    username: 'fred123',
-    password: 'pass123'
-}
+// var fred = {
+//     firstName: 'Fred',
+//     lastName: 'Smith',
+//     email: 'fred@email.com',
+//     username: 'fred123',
+//     password: 'pass123'
+// }
+//
+// function getSimpleUser(user){
+//     return {firstName: user.firstName.toLowerCase(), lastName: user.lastName.toLowerCase()};
+// }
+//
+// console.log(getSimpleUser(fred))
 
-function getSimpleUser(user){
-    return {firstName: user.firstName.toLowerCase(), lastName: user.lastName.toLowerCase()};
-}
+// var firstNames = ['CJ', 'Max', 'Claude', 'Meowmeow'];
+// var lastNames = ['Cat', 'Feline', 'Kitten', 'Calico'];
+//
+// createNames(firstNames, lastNames) // returns...
+//
+//     [
+//     {
+//         firstName: 'CJ',
+//         lastName: 'Cat'
+//     },
+//         {
+//             firstName: 'Max',
+//             lastName: 'Feline'
+//         },
+//         {
+//             firstName: 'Claude',
+//             lastName: 'Kitten'
+//         },
+//         {
+//             firstName: 'Meowmeow',
+//             lastName: 'Calico'
+//         }
+//     ]
+//
+// HINT: a solution may involve using a for loop to iterate over the length of one array to push each name object onto an array of name objects that will be returned from the function.
 
-console.log(getSimpleUser(fred))
+var firstNames = ['CJ', 'Max', 'Claude', 'Meowmeow'];
+var lastNames = ['Cat', 'Feline', 'Kitten', 'Calico'];
+
+
+function createNames(array1, array2) {
+    var output = []
+    for (var i = 0; i < array1.length; i += 1){
+        output.push({
+            firstName: array1[i],
+            lastName: array2[i]
+        })
+    }
+    return output;
+}
+console.log(createNames(firstNames, lastNames));
