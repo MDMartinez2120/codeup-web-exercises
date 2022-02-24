@@ -129,18 +129,37 @@
 //
 // HINT: a solution may involve using a for loop to iterate over the length of one array to push each name object onto an array of name objects that will be returned from the function.
 
-var firstNames = ['CJ', 'Max', 'Claude', 'Meowmeow'];
-var lastNames = ['Cat', 'Feline', 'Kitten', 'Calico'];
+// var firstNames = ['CJ', 'Max', 'Claude', 'Meowmeow'];
+// var lastNames = ['Cat', 'Feline', 'Kitten', 'Calico'];
+//
+//
+// function createNames(array1, array2) {
+//     var output = []
+//     for (var i = 0; i < array1.length; i += 1){
+//         output.push({
+//             firstName: array1[i],
+//             lastName: array2[i]
+//         })
+//     }
+//     return output;
+// }
+// console.log(createNames(firstNames, lastNames));
 
-
-function createNames(array1, array2) {
-    var output = []
-    for (var i = 0; i < array1.length; i += 1){
-        output.push({
-            firstName: array1[i],
-            lastName: array2[i]
-        })
+function remainder(val1, val2){
+    if (val1 > val2){
+        return val1 % val2
+    }if (val2 > val1){
+        return val2 % val1
     }
-    return output;
 }
-console.log(createNames(firstNames, lastNames));
+console.log(remainder(5, 30))
+
+function printerError(val1){
+    var lengthOfString = val1.length
+    var totalOverM = 0
+    for (var i in val1){
+        if (val1[i] > 'm'){totalOverM++}
+    }
+        return '' + totalOverM + '/' + lengthOfString;
+}
+
