@@ -145,21 +145,38 @@
 // }
 // console.log(createNames(firstNames, lastNames));
 
-function remainder(val1, val2){
-    if (val1 > val2){
-        return val1 % val2
-    }if (val2 > val1){
-        return val2 % val1
-    }
-}
-console.log(remainder(5, 30))
+// function remainder(val1, val2){
+//     if (val1 > val2){
+//         return val1 % val2
+//     }if (val2 > val1){
+//         return val2 % val1
+//     }
+// }
+// console.log(remainder(5, 30))
+//
+// function printerError(val1){
+//     var lengthOfString = val1.length
+//     var totalOverM = 0
+//     for (var i in val1){
+//         if (val1[i] > 'm'){totalOverM++}
+//     }
+//         return '' + totalOverM + '/' + lengthOfString;
+// }
 
-function printerError(val1){
-    var lengthOfString = val1.length
-    var totalOverM = 0
-    for (var i in val1){
-        if (val1[i] > 'm'){totalOverM++}
+function isLockNessMonster(s){
+    if (s.includes('tree fiddy')){
+        return true;
+    }else {
+        return false;
     }
-        return '' + totalOverM + '/' + lengthOfString;
 }
+
+
+console.log(isLockNessMonster("Your girlscout cookies are ready to ship. Your total comes to tree fiddy"));
+
+console.log(isLockNessMonster("Your girlscout cookies are ready to ship. Your total comes to tree fiddy"));
+
+console.log(isLockNessMonster("Yo, I heard you were on the lookout for Nessie. Let me know if you need assistance."));
+
+console.log(isLockNessMonster("Yo, I heard you were on the lookout for Nessie. Let me know if you need assistance."));
 
