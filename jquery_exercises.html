@@ -6,26 +6,26 @@
     </head>
 
         <body>
-          <h1>jQuery Exercises</h1>
+          <h1 class="blah">jQuery Exercises</h1>
 
           <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 
-          <p id="article">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium, assumenda at atque aut, corporis cupiditate dolores dolorum eaque enim esse minima natus porro quas quibusdam, tenetur unde veniam!</p>
+          <p class="blah">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium, assumenda at atque aut, corporis cupiditate dolores dolorum eaque enim esse minima natus porro quas quibusdam, tenetur unde veniam!</p>
 
-          <p class="codeup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aspernatur deleniti doloremque earum illo illum modi, molestiae, molestias nemo nulla obcaecati officiis saepe sed! Et explicabo laudantium officia repellat! Aliquid?</p>
+          <p class="blah">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aspernatur deleniti doloremque earum illo illum modi, molestiae, molestias nemo nulla obcaecati officiis saepe sed! Et explicabo laudantium officia repellat! Aliquid?</p>
 
           <ul>
-              <li>pizza</li>
-              <li>pasta</li>
-              <li>burgers</li>
-              <li>tacos</li>
+              <li class="blah">pizza</li>
+              <li class="blah">pasta</li>
+              <li class="blah">burgers</li>
+              <li class="blah">tacos</li>
           </ul>
 
-          <ol class="codeup">
-              <li>cake</li>
-              <li>cookies</li>
-              <li>pie</li>
-              <li>ice cream</li>
+          <ol>
+              <li class="blah">cake</li>
+              <li class="blah">cookies</li>
+              <li class="blah">pie</li>
+              <li class="blah">ice cream</li>
           </ol>
 
           <div>
@@ -43,7 +43,13 @@
             // var heading2 = $('#smallHeading').html();
             //     alert(heading2)
 
-            $('.codeup').css('border', '1px solid red')
+            // $('.codeup').css('border', '1px solid red')
+            //
+
+            $('li').css('font size', '20px')
+
+            var contents = $('.blah').html();
+            alert(contents)
 
             });
 
