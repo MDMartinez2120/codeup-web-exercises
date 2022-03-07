@@ -12,16 +12,16 @@
 
           <p id="article">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium, assumenda at atque aut, corporis cupiditate dolores dolorum eaque enim esse minima natus porro quas quibusdam, tenetur unde veniam!</p>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aspernatur deleniti doloremque earum illo illum modi, molestiae, molestias nemo nulla obcaecati officiis saepe sed! Et explicabo laudantium officia repellat! Aliquid?</p>
+          <p class="codeup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aspernatur deleniti doloremque earum illo illum modi, molestiae, molestias nemo nulla obcaecati officiis saepe sed! Et explicabo laudantium officia repellat! Aliquid?</p>
 
-          <ul class="listText">
+          <ul>
               <li>pizza</li>
               <li>pasta</li>
               <li>burgers</li>
               <li>tacos</li>
           </ul>
 
-          <ol>
+          <ol class="codeup">
               <li>cake</li>
               <li>cookies</li>
               <li>pie</li>
@@ -36,12 +36,14 @@
 
             $(document).ready(function() {
                 'use strict';
+            //
+            // var contents = $('#article').html();
+            //     alert(contents)
+            //
+            // var heading2 = $('#smallHeading').html();
+            //     alert(heading2)
 
-            var contents = $('#article').html();
-                alert(contents)
-
-            var heading2 = $('#smallHeading').html();
-                alert(heading2)
+            $('.codeup').css('border', '1px solid red')
 
             });
 
