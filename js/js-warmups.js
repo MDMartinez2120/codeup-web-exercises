@@ -184,23 +184,23 @@
 
 // Consider the following array of users:
 
-    var users = [
-        {
-            username: 'fsmith',
-            email: 'fsmith@email.com',
-            numberOfLogins: 23
-        },
-        {
-            username: 'ksmith',
-            email: 'ksmith@email.com',
-            numberOfLogins: 100
-        },
-        {
-            username: 'lsmith',
-            email: 'lsmith@email.com',
-            numberOfLogins: 10
-        }
-    ];
+    // var users = [
+    //     {
+    //         username: 'fsmith',
+    //         email: 'fsmith@email.com',
+    //         numberOfLogins: 23
+    //     },
+    //     {
+    //         username: 'ksmith',
+    //         email: 'ksmith@email.com',
+    //         numberOfLogins: 100
+    //     },
+    //     {
+    //         username: 'lsmith',
+    //         email: 'lsmith@email.com',
+    //         numberOfLogins: 10
+    //     }
+    // ];
 
 // 1. Create a function, returnFirstUser, that takes in an array of user objects and returns the first user object.
 //
@@ -212,12 +212,12 @@
 //     numberOfLogins: 23
 // }
 
-users.forEach(function (userInfo){
-    var x = users[0];
-    console.log(x);
-})
-
-console.log(users)
+// users.forEach(function (userInfo){
+//     var x = users[0];
+//     console.log(x);
+// })
+//
+// console.log(users)
 
 
 // 2. Create a function, returnTotalUserLogins, that takes in an array of user objects and returns the total count of logins

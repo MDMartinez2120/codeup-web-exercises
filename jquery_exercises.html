@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>jQuery Exercises</title>
+    </head>
+
+        <body>
+          <h1>jQuery Exercises</h1>
+
+          <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+
+          <p id="article">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium, assumenda at atque aut, corporis cupiditate dolores dolorum eaque enim esse minima natus porro quas quibusdam, tenetur unde veniam!</p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aspernatur deleniti doloremque earum illo illum modi, molestiae, molestias nemo nulla obcaecati officiis saepe sed! Et explicabo laudantium officia repellat! Aliquid?</p>
+
+          <ul class="listText">
+              <li>pizza</li>
+              <li>pasta</li>
+              <li>burgers</li>
+              <li>tacos</li>
+          </ul>
+
+          <ol>
+              <li>cake</li>
+              <li>cookies</li>
+              <li>pie</li>
+              <li>ice cream</li>
+          </ol>
+
+          <div>
+              <h3 id="smallHeading">Smaller Heading</h3>
+          </div>
+
+        <script>
+
+            $(document).ready(function() {
+                'use strict';
+
+            var contents = $('#article').html();
+                alert(contents)
+
+            var heading2 = $('#smallHeading').html();
+                alert(heading2)
+
+            });
+
+
+        </script>
+
+        </body>
+</html>
