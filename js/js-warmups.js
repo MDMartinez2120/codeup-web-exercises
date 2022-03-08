@@ -237,3 +237,144 @@
 //         email: 'ksmith@email.com',
 //     numberOfLogins: 100
 // }
+
+
+// ================================= WARM UP
+//
+// Create a function, computeOperations, that takes in an array of operation objects and a starting integer value and returns an integer after all the calculations have completed, using the second integer argument as the first operand. Each operation object will have the following shape:
+//
+// {
+//     operation: 'subtract' (or 'multiply' or 'add'),
+//     integer: 7 (or any positive or negative integer)
+// }
+
+// Example 1...
+//
+// var operations1 = [
+//
+//     {
+//         operation: 'add',
+//         integer: 7
+//     },
+//     {
+//         operation: 'add',
+//         integer: 3
+//     }
+// ]
+//
+// function computeOperations(opArray, int){
+//     for ( var i = 0; i < operations1.length; i++){
+//         return (opArray[i] + int);
+//     }
+// }
+//
+// console.log(computeOperations(operations1, 10));
+
+
+// console.log(computeOperations(operations1, 10)); // returns 20.l
+//
+//
+// Example 2...
+//
+// var operations2 = [
+//
+//     {
+//         operation: 'add',
+//         integer: 7
+//     },
+//     {
+//         operation: 'add',
+//         integer: 3
+//     },
+//     {
+//         operation: 'multiply',
+//         integer: 3
+//     },
+// ]
+//
+// computeOperations(operations2, 10) // returns 60
+//
+//
+// Example 3...
+//
+// var operations3 = [
+//
+//     {
+//         operation: 'subtract',
+//         integer: 5
+//     },
+//     {
+//         operation: 'multiply',
+//         integer: -2
+//     },
+//     {
+//         operation: 'add',
+//         integer: 10
+//     },
+// ]
+//
+// computeOperations(operations3, 10) // returns 0
+
+var operations1 = [
+    {
+        operation: 'add',
+        integer: 7
+    },
+    {
+        operation: 'add',
+        integer: 3
+    }
+];
+
+var operations2 = [
+    {
+        operation: 'add',
+        integer: 7
+    },
+    {
+        operation: 'add',
+        integer: 3
+    },
+    {
+        operation: 'multiply',
+        integer: 3
+    },
+];
+
+var operations3 = [
+    {
+        operation: 'subtract',
+        integer: 5
+    },
+    {
+        operation: 'multiply',
+        integer: -2
+    },
+    {
+        operation: 'add',
+        integer: 10
+    }
+]
+
+function computeOperations(operators, startingNum) {
+    // create a total variable that we'll change with each iteration of loop
+    var total = startingNum;
+
+    // loop through each operation and console log each number
+    for (var i = 0; i < operators.length; i++){
+        if (operators[i].operation === 'add') {
+            total += operators[i].integer;
+        } else if (operators[i].operation === 'subtract') {
+            total -= operators[i].integer;
+        } else if (operators[i].operation === 'multiply') {
+            total *= operators[i].integer;
+        }
+    }
+
+    return total;
+}
+
+
+console.log(computeOperations(operations1, 10), 20);
+console.log(computeOperations(operations2, 10), 60);
+console.log(computeOperations(operations3, 10), 0);
