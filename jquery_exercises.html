@@ -10,9 +10,9 @@
 
           <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 
-          <p class="blah">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium, assumenda at atque aut, corporis cupiditate dolores dolorum eaque enim esse minima natus porro quas quibusdam, tenetur unde veniam!</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium, assumenda at atque aut, corporis cupiditate dolores dolorum eaque enim esse minima natus porro quas quibusdam, tenetur unde veniam!</p>
 
-          <p class="blah">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aspernatur deleniti doloremque earum illo illum modi, molestiae, molestias nemo nulla obcaecati officiis saepe sed! Et explicabo laudantium officia repellat! Aliquid?</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aspernatur deleniti doloremque earum illo illum modi, molestiae, molestias nemo nulla obcaecati officiis saepe sed! Et explicabo laudantium officia repellat! Aliquid?</p>
 
           <ul>
               <li class="blah">pizza</li>
@@ -48,10 +48,31 @@
 
             $('li').css('font-size', '20px')
 
-            var contents = $('.blah').html();
-            alert(contents)
+            // var contents = $('.blah').html();
+            // alert(contents)
 
             });
+
+            $('h1').click(
+                function (){
+                    $(this).css('background-color', 'red')
+                }
+            )
+
+            $('p').click(
+                function (){
+                    $(this).css('font-size', '18px')
+                }
+            )
+
+            $('.blah').hover(
+                function (){
+                    $(this).css('color', 'red')
+                },
+                function (){
+                $(this).css('color', 'black')
+            }
+            )
 
 
         </script>
