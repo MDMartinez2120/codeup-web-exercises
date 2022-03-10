@@ -76,7 +76,7 @@
 <!--<button>Toggle Answers</button>-->
 
     <h3>Brackenridge Park</h3>
-    <ul  id="texas-parks">
+    <ul>
 
         <li>Registered Texas State Antiquities Landmark</li>
         <li>Named after George Brackenridge</li>
@@ -85,7 +85,7 @@
     </ul>
 
     <h3>Comanche Lookout Park</h3>
-    <ul id="texas-parks">
+    <ul>
 
         <li>The park is 96 acres</li>
         <li>It also has an elevation of 1,340 feet</li>
@@ -94,7 +94,7 @@
     </ul>
 
     <h3>Garden Of The Gods</h3>
-    <ul  id="texas-parks">
+    <ul>
 
         <li>Registered National Natural Landmark</li>
         <li>became a park in 1909</li>
@@ -103,6 +103,8 @@
     </ul>
 
     <button>Highlight</button>
+
+    <button class="bolder">Bold it up!</button>
 
 
 
@@ -124,15 +126,19 @@
 
 // $('#texas-parks').children().last().css('background-color', 'yellow');
 
-$(document).ready(function (){
-    $('button').click(function (){
-        $('#texas-parks').each(function(index) {
-            $('#texas-parks').children().last().css('background-color', 'yellow');
-        });
+$('button').click(function (){
+    $('ul').each(function (){
+        $(this).children().last().css('background-color', 'yellow')
     })
 })
 
+$('h3').click(function (){
+    $(this).next().css('font-weight', 'bold')
+})
 
+$('li').click(function (){
+    $(this).parent().children().first().css('color', 'blue')
+})
 
 
 
