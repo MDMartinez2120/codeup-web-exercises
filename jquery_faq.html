@@ -8,6 +8,9 @@
     <style>
 
         /* extra styling to make the dt elements standout */
+        body {
+            background-color: slategray;
+        }
         dt {
             text-decoration: underline;
             margin-top: 20px;
@@ -70,7 +73,37 @@
     <dd class="invisible">Vehicles, and vehicle combinations, longer than 21 feet (including bumpers) or wider than 8 feet (including mirrors) are prohibited between Avalanche Campground and the Sun Point parking area. You may however, drive to Avalanche if traveling east, and to Sun Point, if traveling west. Vehicles over 10 feet in height may have difficulty driving west from Logan Pass due to rock overhangs. Stock trucks and trailers may access Packers Roost and Siyeh Bend.</dd>
 </dl>
 
-<button>Toggle Answers</button>
+<!--<button>Toggle Answers</button>-->
+
+    <h3>Brackenridge Park</h3>
+    <ul  id="texas-parks">
+
+        <li>Registered Texas State Antiquities Landmark</li>
+        <li>Named after George Brackenridge</li>
+        <li>The river was the backbone of Spanish irrigation systems</li>
+        <li>The park is 349 acres</li>
+    </ul>
+
+    <h3>Comanche Lookout Park</h3>
+    <ul id="texas-parks">
+
+        <li>The park is 96 acres</li>
+        <li>It also has an elevation of 1,340 feet</li>
+        <li>Native Americans use the massive hill as a tactical vantage point.</li>
+        <li>Became a park in 1994</li>
+    </ul>
+
+    <h3>Garden Of The Gods</h3>
+    <ul  id="texas-parks">
+
+        <li>Registered National Natural Landmark</li>
+        <li>became a park in 1909</li>
+        <li>300 towering sandstone rock formations</li>
+        <li>great views of Pikes Peak</li>
+    </ul>
+
+    <button>Highlight</button>
+
 
 
 
@@ -81,13 +114,25 @@
 //
 // })
 
+// $(document).ready(function (){
+//     $('button').click(function (){
+//         $('dd').each(function (index, element){
+//             $(element).toggleClass('invisible')
+//         })
+//     });
+// })
+
+// $('#texas-parks').children().last().css('background-color', 'yellow');
+
 $(document).ready(function (){
     $('button').click(function (){
-        $('dd').each(function (index, element){
-            $(element).toggleClass('invisible')
-        })
-    });
+        $('#texas-parks').each(function(index) {
+            $('#texas-parks').children().last().css('background-color', 'yellow');
+        });
+    })
 })
+
+
 
 
 
