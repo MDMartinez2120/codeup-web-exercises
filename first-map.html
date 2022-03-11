@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Map</title>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+
+<div id='map' style='width: 400px; height: 300px;'></div>
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
+<script src="js/keys.js"></script>
+
+<script>
+    'use strict';
+
+    mapboxgl.accessToken = MAPBOX_API_TOKEN;
+
+
+        var map = new mapboxgl.Map({
+            container: 'map', // container ID
+            style: 'mapbox://styles/mapbox/streets-v11', // style URL
+            center: [-98.4916, 29.4252], // starting position [lng, lat]
+            zoom: 9 // starting zoom
+        });
+
+    // Mini - Exercise 1 (before markers)
+    //
+    // In this file, create a Mapbox map that shows your home town. After 5 seconds, have the map automatically change to a map of the entire United States using a satellite style.
+
+    //SOMETHING LIKE THIS TO CHANGE MAP PROPERTIES.
+    // setTimeout(function (){
+    //     map.setCenter(-95.7129, 37.0902);
+    //     map.setZoom(3);
+    //     map.setStyle('mapbox://styles/mapbox/streets-v11');
+    // }, 5000)
+
+
+</script>
+
+</body>
+</html>
