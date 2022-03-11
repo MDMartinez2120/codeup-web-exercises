@@ -385,7 +385,7 @@
 
 // Examples:
 //
-var nums1 = [1, 2, 3, 4, 5];
+// var nums1 = [1, 2, 3, 4, 5];
 // var nums2 = [2, 2, 3, 4, 5];
 // var nums3 = [10, 0, -5, 4, 5];
 // var nums4 = [2, 2, -5, 2, 2];
@@ -405,14 +405,41 @@ var nums1 = [1, 2, 3, 4, 5];
 //     }
 // }
 
-function addTwos(array){
-    for (var i = 0; i < array.length; i++){
-        if (array[i] === 2){
-           return array[i] + 2
-        }else {
-            return false;
-        }
+// function addTwos(array){
+//     for (var i = 0; i < array.length; i++){
+//         if (array[i] === 2){
+//            return array[i] + 2
+//         }else {
+//             return false;
+//         }
+//     }
+// }
+//
+// console.log(addTwos(nums1));
+
+// Write a function, returnStringObject, that takes in a string and returns an object with information about the string. The object should have properties for stringValue and stringArray.
+//
+//     Examples...
+//
+// returnStringObject('hello') // returns...
+//
+// {
+//     stringValue: 'hello',
+//         stringArray: ['h', 'e', 'l', 'l', 'o']
+// }
+//
+// returnStringObject('codeup') // returns...
+//
+// {
+//     stringValue: 'codeup',
+//         stringArray: ['c', 'o', 'd', 'e', 'u', 'p']
+// }
+
+function returnStringObject(string){
+    return {
+        stringValue: string,
+        stringArray: string.split('')
     }
 }
 
-console.log(addTwos(nums1));
+console.log(returnStringObject('hello'));
