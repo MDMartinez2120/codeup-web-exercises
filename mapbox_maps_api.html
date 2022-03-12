@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox Maps</title>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+
+<div id='map' style='width: 400px; height: 300px;'></div>
+
+<div id='restaurants'>
+    <button>Button1</button>
+</div>
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
+<script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+
+<script>
+    'use strict';
+
+    mapboxgl.accessToken = MAPBOX_API_TOKEN;
+
+
+    var map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-98.4664, 29.4610], // starting position [lng, lat]
+        zoom: 17 // starting zoom
+    });
+
+    var marker = new mapboxgl.Marker(map)
+        .setLngLat(restaurantList())
+        .setPopup(new mapboxgl.Popup().setHTML('<h1>Smoke Shack</h1>')).addTo(map);
+
+    // var foodMarker = new mapboxgl.Marker(map)
+    //     .setLngLat(restaurantList());
+
+    var restaurants = [{
+        name: 'Barbaro',
+        address: '[-98.4917, 29.4557]'
+    },
+        {
+            name: 'Lucys Cafe',
+            address: '[-98.5262991706512, 29.484095860935447]'
+        },
+            {
+            name: 'Thai Dee',
+            address: '[-98.5082, 29.4994]'
+        }];
+
+    function restaurantList(){
+        var numCallbackruns = 0
+        restaurants.forEach((element, index) => {
+            numCallbackruns++
+        })
+        return restaurants;
+    }
+
+    $('button').click(function (){
+        console.log(restaurantList());
+    })
+
+
+
+
+        // var numCallbackruns = 0
+        // restaurants.forEach((element, index) => {
+        //     // console.log({element, index});
+        //     numCallbackruns++
+        // })
+
+</script>
+
+</body>
+</html>
