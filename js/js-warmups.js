@@ -435,11 +435,25 @@
 //         stringArray: ['c', 'o', 'd', 'e', 'u', 'p']
 // }
 
-function returnStringObject(string){
-    return {
-        stringValue: string,
-        stringArray: string.split('')
+// function returnStringObject(string){
+//     return {
+//         stringValue: string,
+//         stringArray: string.split('')
+//     }
+// }
+//
+// console.log(returnStringObject('hello'));
+
+function countNegatives(nums){
+    var negStart = 0
+    // console.log(nums.length)
+    for (var i = 0; i < nums.length; i++){
+        if (nums[i] < 0){
+            negStart++
+        }
     }
+    return negStart;
 }
 
-console.log(returnStringObject('hello'));
+console.log(countNegatives([-5, 10, 2, 5]));
+console.log(countNegatives([1, -10, -2, 5]));
