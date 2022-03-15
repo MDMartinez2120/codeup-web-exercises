@@ -462,41 +462,41 @@
 //
 //     Example...
 
-var users = [
-    {
-        firstName: 'Bob',
-        lastName: 'Smith',
-        email: 'bob@email.com'
-    },
-    {
-        firstName: 'Sally',
-        lastName: 'Smith',
-        email: 'sally@email.com'
-    },
-    {
-        firstName: 'Fred',
-        lastName: 'Smith',
-        email: 'fred@email.com'
-    },
-    {
-        firstName: 'Cathy',
-        lastName: 'Smith',
-        email: 'cathy@email.com'
-    },
-    {
-        firstName: 'Joe',
-        lastName: 'Smith',
-        email: 'joe@email.com'
-    },
-];
-
-console.log(createFirstNamesArray(users)); // returns... ['Bob', 'Sally', 'Fred', 'Cathy', 'Joe']
-
-function createFirstNamesArray(arr){
-    var start = []
-    for (var i = 0; i < arr.length; i++){
-        start += arr[i].firstName;
-    }
-    return start.split()
-}
+// var users = [
+//     {
+//         firstName: 'Bob',
+//         lastName: 'Smith',
+//         email: 'bob@email.com'
+//     },
+//     {
+//         firstName: 'Sally',
+//         lastName: 'Smith',
+//         email: 'sally@email.com'
+//     },
+//     {
+//         firstName: 'Fred',
+//         lastName: 'Smith',
+//         email: 'fred@email.com'
+//     },
+//     {
+//         firstName: 'Cathy',
+//         lastName: 'Smith',
+//         email: 'cathy@email.com'
+//     },
+//     {
+//         firstName: 'Joe',
+//         lastName: 'Smith',
+//         email: 'joe@email.com'
+//     },
+// ];
+//
+// console.log(createFirstNamesArray(users)); // returns... ['Bob', 'Sally', 'Fred', 'Cathy', 'Joe']
+//
+// function createFirstNamesArray(arr){
+//     var start = []
+//     for (var i = 0; i < arr.length; i++){
+//         start += arr[i].firstName;
+//     }
+//     return start.split()
+// }
 

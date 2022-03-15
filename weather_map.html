@@ -24,14 +24,17 @@
         </form>
     </div>
 </nav>
+<hr>
 <!--div for weather tiles-->
-
-<div class="dailyWeather d-flex col order-1 bg-danger">
-<!--        <p>Date</p>-->
-<!--        <p>High/Low</p>-->
-<!--        <p>Humidity</p>-->
-<!--        <p>Wind</p>-->
+<div class="d-flex w-100 overflow-scroll mt-3 mb-3">
+<div id="dailyWeather" class="d-flex justify-content-center">
+<!--js is handling this.-->
 </div>
+</div>
+<hr>
+
+
+<pre id="coordinates" class="coordinates"></pre>
 
 
 
@@ -39,24 +42,9 @@
 
 
 
-<!--<table>-->
-<!--    <thead>-->
-<!--    <tr>-->
-<!--        <th>Title</th>-->
-<!--        <th>Quantity</th>-->
-<!--        <th>Price</th>-->
-<!--        <th>Categories</th>-->
-<!--    </tr>-->
-<!--    </thead>-->
-<!--    <tbody id="daily-weather">-->
-<!--    &lt;!&ndash;        <tr>&ndash;&gt;-->
-<!--    &lt;!&ndash;            <th>Title[i].title</th>&ndash;&gt;-->
-<!--    &lt;!&ndash;            <th>Quantity[i].quantity</th>&ndash;&gt;-->
-<!--    &lt;!&ndash;            <th>Price[i].price</th>&ndash;&gt;-->
-<!--    &lt;!&ndash;            <th>Categories[i].categories</th>&ndash;&gt;-->
-<!--    &lt;!&ndash;        </tr>&ndash;&gt;-->
-<!--    </tbody>-->
-<!--</table>-->
+
+
+
 
 <!--Map box-->
 <div id='map' style='width: 100%; height: 600px;'></div>
@@ -83,7 +71,7 @@
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/streets-v11', // style URL
         center: [-98.4664, 29.4610], // starting position [lng, lat]
-        zoom: 15 // starting zoom
+        zoom: 10 // starting zoom
     });
 
 
@@ -96,7 +84,7 @@
     }).done(function(data) {
         function createHTML(data){
             var html = ''
-            for (var i = 0; i < data.daily.length; i++) {
+            for (var i = 0; i < 5; i++) {
                 var dateData = data.daily[i].dt;
                 var date = new Date(dateData * 1000).toDateString()
                 var maxTemp = data.daily[i].temp.max;
@@ -104,32 +92,39 @@
                 var humidity = data.daily[i].humidity;
                 var windSpeed = data.daily[i].wind_speed;
                 html +=
-                    '<p>' + date + '</p>' +
-                    '<p>' + 'High/Low ' + maxTemp + '/' + minTemp + '</p>' +
-                    '<p>' + 'Humidity ' + humidity + '</p>' +
-                    '<p>' + 'Wind' + windSpeed + '</p>'
-
+                    '<div class="card" style="width: 15rem;">' +
+                        '<div class="card-header">' +
+                            date +
+                        '</div>' +
+                        '<ul class="list-group list-group-flush">' +
+                           ' <li class="list-group-item">' + 'High/Low: ' + maxTemp + '/' + minTemp + '</li>' +
+                            '<li class="list-group-item">' + 'Humidity: ' + humidity + '</li>' +
+                            '<li class="list-group-item">' + 'Wind Speed: ' + windSpeed + '</li>' +
+                        '</ul>' +
+                    '</div>'
             }
             return html;
         }
-            $('.dailyWeather').html(createHTML(data))
+            $('#dailyWeather').html(createHTML(data))
     }).fail(function(jqXhr, status, error) {
 
     });
 
-    // ' <div>' +
-    //     '<p>' + date + '</p>' +
-    // ' </div>' +
-    //  '<div>' +
-    //     '<p>' + maxTemp + '' + minTemp +'</p>' +
-    //  '</div>' +
-    //  '<div>' +
-    //      '<p>' + humidity + '</p>' +
-    //  '</div>' +
-    //  '<div ">' +
-    //      '<p>' + windSpeed + '</p>' +
-    //  '</div>'
+    const coordinates = document.getElementById('coordinates');
+    const marker = new mapboxgl.Marker({
+        draggable: true
+    })
+        .setLngLat([- 98.4664, 29.4610])
+        .addTo(map);
 
+    function onDragEnd() {
+        const lngLat = marker.getLngLat()
+        reverseGeocode(lngLat, MAPBOX_API_TOKEN).then(function (data){
+
+        })
+    }
+
+    marker.on('dragend', onDragEnd);
 
 
 
