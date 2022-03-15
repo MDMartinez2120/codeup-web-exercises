@@ -64,6 +64,9 @@
 
     'use strict';
 
+    var lat= 29.41;
+    var lng = -98.49;
+
     mapboxgl.accessToken = MAPBOX_API_TOKEN;
 
 
@@ -73,55 +76,62 @@
         center: [-98.4664, 29.4610], // starting position [lng, lat]
         zoom: 10 // starting zoom
     });
+    weatherMap()
+    function weatherMap() {
 
 
-    $.get('https://api.openweathermap.org/data/2.5/onecall', {
-        lat: 29.4252,
-        lon: -98.4916,
-        appid:OPENWEATHER_API_TOKEN,
-        exclude: 'minutely, hourly, current, alerts',
-        units: 'imperial',
-    }).done(function(data) {
-        function createHTML(data){
-            var html = ''
-            for (var i = 0; i < 5; i++) {
-                var dateData = data.daily[i].dt;
-                var date = new Date(dateData * 1000).toDateString()
-                var maxTemp = data.daily[i].temp.max;
-                var minTemp = data.daily[i].temp.min;
-                var humidity = data.daily[i].humidity;
-                var windSpeed = data.daily[i].wind_speed;
-                html +=
-                    '<div class="card" style="width: 15rem;">' +
+        $.get('https://api.openweathermap.org/data/2.5/onecall', {
+            lat: lat,
+            lon: lng,
+            appid: OPENWEATHER_API_TOKEN,
+            exclude: 'minutely, hourly, current, alerts',
+            units: 'imperial',
+        }).done(function (data) {
+            function createHTML(data) {
+                var html = ''
+                for (var i = 0; i < 5; i++) {
+                    var dateData = data.daily[i].dt;
+                    var date = new Date(dateData * 1000).toDateString()
+                    var maxTemp = data.daily[i].temp.max;
+                    var minTemp = data.daily[i].temp.min;
+                    var humidity = data.daily[i].humidity;
+                    var windSpeed = data.daily[i].wind_speed;
+                    html +=
+                        '<div class="card" style="width: 15rem;">' +
                         '<div class="card-header">' +
-                            date +
+                        date +
                         '</div>' +
                         '<ul class="list-group list-group-flush">' +
-                           ' <li class="list-group-item">' + 'High/Low: ' + maxTemp + '/' + minTemp + '</li>' +
-                            '<li class="list-group-item">' + 'Humidity: ' + humidity + '</li>' +
-                            '<li class="list-group-item">' + 'Wind Speed: ' + windSpeed + '</li>' +
+                        ' <li class="list-group-item">' + 'High/Low: ' + maxTemp + '/' + minTemp + '</li>' +
+                        '<li class="list-group-item">' + 'Humidity: ' + humidity + '</li>' +
+                        '<li class="list-group-item">' + 'Wind Speed: ' + windSpeed + '</li>' +
                         '</ul>' +
-                    '</div>'
+                        '</div>'
+                }
+                return html;
             }
-            return html;
-        }
-            $('#dailyWeather').html(createHTML(data))
-    }).fail(function(jqXhr, status, error) {
 
-    });
+            $('#dailyWeather').html(createHTML(data))
+        });
+    }
+
+
 
     const coordinates = document.getElementById('coordinates');
     const marker = new mapboxgl.Marker({
         draggable: true
     })
-        .setLngLat([- 98.4664, 29.4610])
+        .setLngLat([lng, lat])
         .addTo(map);
 
     function onDragEnd() {
         const lngLat = marker.getLngLat()
+        lng = lngLat.lng;
+        lat = lngLat.lat;
         reverseGeocode(lngLat, MAPBOX_API_TOKEN).then(function (data){
 
         })
+        weatherMap()
     }
 
     marker.on('dragend', onDragEnd);
