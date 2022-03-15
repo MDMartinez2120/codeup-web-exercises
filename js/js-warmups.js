@@ -444,16 +444,59 @@
 //
 // console.log(returnStringObject('hello'));
 
-function countNegatives(nums){
-    var negStart = 0
-    // console.log(nums.length)
-    for (var i = 0; i < nums.length; i++){
-        if (nums[i] < 0){
-            negStart++
-        }
+// function countNegatives(nums){
+//     var negStart = 0
+//     // console.log(nums.length)
+//     for (var i = 0; i < nums.length; i++){
+//         if (nums[i] < 0){
+//             negStart++
+//         }
+//     }
+//     return negStart;
+// }
+//
+// console.log(countNegatives([-5, 10, 2, 5]));
+// console.log(countNegatives([1, -10, -2, 5]));
+
+// Create a function, createFirstNamesArray, that takes in an array of user objects and returns an array of first name strings. Assume that each user object has a property called 'firstName'.
+//
+//     Example...
+
+var users = [
+    {
+        firstName: 'Bob',
+        lastName: 'Smith',
+        email: 'bob@email.com'
+    },
+    {
+        firstName: 'Sally',
+        lastName: 'Smith',
+        email: 'sally@email.com'
+    },
+    {
+        firstName: 'Fred',
+        lastName: 'Smith',
+        email: 'fred@email.com'
+    },
+    {
+        firstName: 'Cathy',
+        lastName: 'Smith',
+        email: 'cathy@email.com'
+    },
+    {
+        firstName: 'Joe',
+        lastName: 'Smith',
+        email: 'joe@email.com'
+    },
+];
+
+console.log(createFirstNamesArray(users)); // returns... ['Bob', 'Sally', 'Fred', 'Cathy', 'Joe']
+
+function createFirstNamesArray(arr){
+    var start = []
+    for (var i = 0; i < arr.length; i++){
+        start += arr[i].firstName;
     }
-    return negStart;
+    return start.split()
 }
 
-console.log(countNegatives([-5, 10, 2, 5]));
-console.log(countNegatives([1, -10, -2, 5]));
