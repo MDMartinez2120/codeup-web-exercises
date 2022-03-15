@@ -46,13 +46,13 @@
                    '<td>'+ products[i].quantity+'</td>'+
                    '<td>'+ products[i].price+'</td>'+
                    '<td>'+ products[i].categories+'</td>'+
-                    '</tr>'
+                   '</tr>'
            }
            return html;
 
        }
-       $.get('data/inventory.json').done(function (products){
-           $('#insertProducts').html(createHTML(products))
+       $.get('data/inventory.json').done(function (data){
+           $('#insertProducts').html(createHTML(data))
        })
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
