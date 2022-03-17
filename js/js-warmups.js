@@ -505,5 +505,10 @@ colorChange.addEventListener('click', function(){
     document.getElementById('square').style.backgroundColor = 'cyan'
 })
 
+var pageReset = document.getElementById('reset');
+pageReset.addEventListener('click', function (){
+    location.reload()
+})
+
 
 // document.getElementById('#changeColor').addEventListener('click', colorChange )
