@@ -500,3 +500,10 @@
 //     return start.split()
 // }
 
+var colorChange = document.getElementById('changeColor');
+colorChange.addEventListener('click', function(){
+    document.getElementById('square').style.backgroundColor = 'cyan'
+})
+
+
+// document.getElementById('#changeColor').addEventListener('click', colorChange )
