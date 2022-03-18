@@ -500,15 +500,21 @@
 //     return start.split()
 // }
 
-var colorChange = document.getElementById('changeColor');
-colorChange.addEventListener('click', function(){
-    document.getElementById('square').style.backgroundColor = 'cyan'
-})
-
-var pageReset = document.getElementById('reset');
-pageReset.addEventListener('click', function (){
-    location.reload()
-})
+// var colorChange = document.getElementById('changeColor');
+// colorChange.addEventListener('click', function(){
+//     document.getElementById('square').style.backgroundColor = 'cyan'
+// })
+//
+// var pageReset = document.getElementById('reset');
+// pageReset.addEventListener('click', function (){
+//     location.reload()
+// })
 
 
 // document.getElementById('#changeColor').addEventListener('click', colorChange )
+
+const square = document.getElementsByClassName('square');
+square.addEventListener('click', function (event){
+    event.getElementsByClassName('square').style.backgroundColor = 'green'
+})
+
