@@ -75,13 +75,24 @@
     // FILTER
 
     // TODO 4: using filter, create a new array containing only dogs younger than 10 years old
-    console.log('Exercise 4:');
+
+    const youngDogs = dogs.filter(dog => dog.age < 10)
+
+    console.log(youngDogs);
 
     // TODO 5: using filter, create a new array containing only dogs named 'Lexie'
-    console.log('Exercise 5:');
+
+    const lexieDog = dogs.filter(dog => dog.dogName === 'Lexie');
+
+    console.log(lexieDog);
 
     // TODO 6: using filter, create a new array containing only dogs that are trained and younger than 10
-    console.log('Exercise 6:');
+    let True = dogs.map(element => ({value: element.isTrained = true}))
+    const youngTrained = dog => dog.age < 10 && dog.isTrained
+
+    const youngTrainedDogs = dogs.filter(youngTrained)
+
+    console.log(youngTrainedDogs);
 
 
     // REDUCE
