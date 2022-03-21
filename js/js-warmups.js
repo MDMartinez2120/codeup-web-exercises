@@ -513,8 +513,15 @@
 
 // document.getElementById('#changeColor').addEventListener('click', colorChange )
 
-const square = document.getElementsByClassName('square');
-square.addEventListener('click', function (event){
-    event.getElementsByClassName('square').style.backgroundColor = 'green'
-})
+// const square = document.getElementsByClassName('square');
+// square.addEventListener('click', function (event){
+//     event.getElementsByClassName('square').style.backgroundColor = 'green'
+// })
 
+const changingColors = document.querySelectorAll('#changingColors .square');
+
+function toggleColor(e){
+    console.log('yellow')
+}
+
+changingColors.forEach(square => square.addEventListener('click', toggleColor));
