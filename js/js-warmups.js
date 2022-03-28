@@ -518,10 +518,44 @@
 //     event.getElementsByClassName('square').style.backgroundColor = 'green'
 // })
 
-const changingColors = document.querySelectorAll('#changingColors .square');
+// const changingColors = document.querySelectorAll('#changingColors .square');
+//
+// function toggleColor(e){
+//     console.log('yellow')
+// }
+//
+// changingColors.forEach(square => square.addEventListener('click', toggleColor));
 
-function toggleColor(e){
-    console.log('yellow')
-}
+// function sayHello(name) {
+//     return 'Hello, ' + name + '!';
+// }
+//
+// console.log(sayHello('matt'));
 
-changingColors.forEach(square => square.addEventListener('click', toggleColor));
+// var myOutput = originalString + " is an example of " + description + " thinking.";
+
+// Create a function, encodeStr, that takes in a string and returns the string of characters with the following substitutions:
+//     ‘a’ or ‘A’ becomes ‘@’
+// ‘i’ or ‘I’ becomes ‘1’
+// ‘s’ or ‘S’ becomse ‘$’
+// encodeStr(‘apple’) // returns ‘@pple’
+// encodeStr(‘codeup’) // returns ‘codeup’
+// encodeStr(‘SASS’) // returns ‘$@$$’
+// encodeStr(‘bike’) // returns ‘b1ke’
+
+// let alp = 'A' || 'a';
+// let ip = 'i' || 'I';
+// let sip = 's' || 'S';
+//
+// function encodeStr(string){
+//     if (string === alp){
+//         return string.replace(alp, '@');
+//     }if (string === ip){
+//         return string.replace(ip, '1');
+//     }if (string === sip){
+//         return string.replace(sip, '$');
+//     }
+// }
+//
+// console.log(encodeStr('apple'));
+// console.log(encodeStr('codeup'));

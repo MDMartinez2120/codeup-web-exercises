@@ -77,8 +77,8 @@ console.log(userExperience)
 const longestEmail = usersEmails.reduce((previousValue, currentValue) => {
     if (previousValue.length > currentValue.length){
         return currentValue;
-    }else {
-        return previousValue
+    }if (currentValue.length > previousValue.length){
+        return previousValue;
     }
 }, '');
 console.log(longestEmail)

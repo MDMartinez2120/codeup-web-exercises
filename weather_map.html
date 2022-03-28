@@ -11,7 +11,7 @@
 <!--Header div-->
 <div class="d-flex bg-primary">
 <header>
-    <h1>Weather App</h1>
+    <h1 class="pulse">Weather App</h1>
 </header>
 </div>
 <!--Navbar-->
@@ -27,7 +27,7 @@
 <hr>
 <!--div for weather tiles-->
 <div class="d-flex w-100 overflow-scroll mt-3 mb-3 justify-content-center">
-<div id="dailyWeather" class="d-flex justify-content-center">
+<div id="dailyWeather" class="d-flex pulse">
 <!--js is handling this.-->
 </div>
 </div>
@@ -78,9 +78,7 @@
     });
     weatherMap()
     function weatherMap() {
-
-
-        $.get('https://api.openweathermap.org/data/2.5/onecall', {
+         $.get('https://api.openweathermap.org/data/2.5/onecall', {
             lat: lat,
             lon: lng,
             appid: OPENWEATHER_API_TOKEN,
@@ -117,7 +115,7 @@
 
 
 
-    const coordinates = document.getElementById('coordinates');
+    // const coordinates = document.getElementById('coordinates');
     const marker = new mapboxgl.Marker({
         draggable: true
     })
@@ -133,16 +131,23 @@
         })
         weatherMap()
     }
-
     marker.on('dragend', onDragEnd);
 
+    // function onDragEnd() {
+    //     const lngLat = marker.getLngLat()
+    //     lng = lngLat.lng;
+    //     lat = lngLat.lat;
+    //     reverseGeocode(lngLat, MAPBOX_API_TOKEN).then(function (data){
+    //
+    //     })
+    //     weatherMap()
+    // }
+    // marker.on('dragend', onDragEnd);
 
-
-
-
-
-
-
+    // const btn = document.getElementById("btn");
+    // btn.addEventListener("click", () => {
+    //     console.log("hello");
+    // });
 
 
 </script>
