@@ -24,21 +24,21 @@
     mapboxgl.accessToken = MAPBOX_API_TOKEN;
 
 
-    var map = new mapboxgl.Map({
+    let map = new mapboxgl.Map({
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/streets-v11', // style URL
         center: [-98.4664, 29.4610], // starting position [lng, lat]
         zoom: 17 // starting zoom
     });
 
-    var marker = new mapboxgl.Marker(map)
+    let marker = new mapboxgl.Marker(map)
         .setLngLat(restaurantList())
         .setPopup(new mapboxgl.Popup().setHTML('<h1>Smoke Shack</h1>')).addTo(map);
 
     // var foodMarker = new mapboxgl.Marker(map)
     //     .setLngLat(restaurantList());
 
-    var restaurants = [{
+    let restaurants = [{
         name: 'Barbaro',
         address: '[-98.4917, 29.4557]'
     },
@@ -52,7 +52,7 @@
         }];
 
     function restaurantList(){
-        var numCallbackruns = 0
+        let numCallbackruns = 0
         restaurants.forEach((element, index) => {
             numCallbackruns++
         })
@@ -64,13 +64,6 @@
     })
 
 
-
-
-        // var numCallbackruns = 0
-        // restaurants.forEach((element, index) => {
-        //     // console.log({element, index});
-        //     numCallbackruns++
-        // })
 
 </script>
 

@@ -1,0 +1,14 @@
+#head {
+    background: rgb(63,94,251);
+    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(101,120,230,1) 100%, rgba(196,40,72,1) 100%);
+}
+
+body {
+    background: rgb(63,94,251);
+    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(101,120,230,1) 100%, rgba(196,40,72,1) 100%);
+}
+
+h1 {
+    color: white;
+}
+

@@ -559,3 +559,64 @@
 //
 // console.log(encodeStr('apple'));
 // console.log(encodeStr('codeup'));
+
+// Write a function, returnMostCommonVowel, that takes in a string and returns the most common vowel in the string.
+//     Assume the characters in the string are all lowercase and only 'a' 'e' 'i' 'o' 'u' count as vowels. Return the most common vowel from the string.
+//
+//     If the highest vowel count is shared between multiple vowels, return the first vowel alphabetically. (2 'a's and 2 'e's should 'a')
+//
+// If no vowels are in the string return false.
+
+// function returnMostCommonVowel (str){
+//     const vowelList = ["a", "e", "i", "o", "u"];
+//     str.filter(vowels => str.length)
+//
+//     // return str.match(/[aeiou]/g).length
+// }
+//
+//
+// console.log(returnMostCommonVowel('codeup'))
+
+
+// EXAMPLES...
+//
+// returnMostCommonVowel('codeup') // returns 'e'
+// returnMostCommonVowel('leetcode') // returns 'e'
+// returnMostCommonVowel('banana') // returns 'a'
+// returnMostCommonVowel('asdf') // returns 'a'
+// returnMostCommonVowel('nnnn') // returns false
+// returnMostCommonVowel('hello') // returns 'e'
+// returnMostCommonVowel('needful') // returns 'e'
+
+// Create a function, returnAvgAdminSalary, that takes in an array of users and returns the average salary of all admins. Round to the nearest dollar.
+//
+//     Example:
+
+// const users = [
+//     {
+//         name: 'Fred',
+//         isAdmin: true,
+//         salary: 20000
+//     },
+//     {
+//         name: 'Cathy',
+//         isAdmin: false,
+//         salary: 40000
+//     },
+//     {
+//         name: 'Sally',
+//         isAdmin: true,
+//         salary: 80000
+//     },
+//     {
+//         name: 'Kyle',
+//         isAdmin: true,
+//         salary: 50000
+//     },
+//     {
+//         name: 'Cynthia',
+//         isAdmin: false,
+//         salary: 100000
+//     }
+// ];
+
